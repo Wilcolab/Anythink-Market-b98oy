@@ -33,13 +33,13 @@ async function main() {
 }
 
 function generateRandomName() {
-    const firstNames = ['John', 'Jane', 'Sam', 'Sally', 'James', 'Emily', 'Kyle', 'Jenny', 'Timothy'];
+    const firstNames = ['John', 'Jane', 'Sam', 'Sally', 'James', 'Emily', 'Kyle', 'Jenny', 'Timothy', 'Jake', 'Greg', 'Dan', 'Cindy', 'Aaron', 'Adam'];
     const lastNames = ['Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Miller', 'Liang', 'Ermey', 'Wang'];
   
     const randomFirstName = firstNames[Math.floor(Math.random() * firstNames.length)];
     const randomLastName = lastNames[Math.floor(Math.random() * lastNames.length)];
   
-    return `${randomFirstName}${randomLastName}`;
+    return `${randomFirstName}${randomLastName}${Math.random * 1000}`;
 }
 
 function generateRandomTitle(){
@@ -55,7 +55,7 @@ function generateRandomTitle(){
 async function generateUsers(){
     for (let i = 0; i < numberToSeed; i++){
         let username = generateRandomName();
-        let email = `${username}${Math.random * 1000}@emailaddress.com`;
+        let email = `${username}@emailaddress.com`;
         let user = new User({username, email})
         await user.save()
     }
