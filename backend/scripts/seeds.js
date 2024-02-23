@@ -38,8 +38,8 @@ function generateRandomName() {
   
     const randomFirstName = firstNames[Math.floor(Math.random() * firstNames.length)];
     const randomLastName = lastNames[Math.floor(Math.random() * lastNames.length)];
-  
-    return `${randomFirstName}${randomLastName}${Math.random * 1000}`;
+    const name = `${randomFirstName}${randomLastName}${Math.floor(Math.random() * 1000)}`;
+    return name;
 }
 
 function generateRandomTitle(){
