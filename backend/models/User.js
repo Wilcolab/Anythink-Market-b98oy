@@ -127,4 +127,4 @@ UserSchema.methods.isFollowing = function(id) {
   });
 };
 
-module.exports = mongoose.model("User", UserSchema);
+mongoose.model("User", UserSchema);

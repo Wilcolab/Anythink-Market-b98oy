@@ -59,4 +59,4 @@ ItemSchema.methods.toJSONFor = function(user) {
   };
 };
 
-module.exports = mongoose.model("Item", ItemSchema);
+mongoose.model("Item", ItemSchema);
